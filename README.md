@@ -35,10 +35,14 @@ The K-Means clustering is implemented from scratch using Python and NumPy. The k
 - `get_labels(data, centroid)`: Assigns each data point to the nearest cluster based on centroid distance.
 - `plot_clusters(data, labels, centroids, iteration)`: Transforms the data to 2D using PCA and plots the clusters. This is done for each iteration of the K-Means algorithm.
 
+![cluster](https://github.com/sagarv2522/fifa-cluster/blob/48afb75b213af56f39c07c0fe116381c9e225729/images/Screenshot%202023-09-01%20193511.png)
 
 ### 3. K-Means Using Scikit-Learn
 
 Another method for K-Means clustering is provided using Scikit-Learn. It calculates and plots the inertia and silhouette score for different numbers of clusters (k) to help you determine the optimal number of clusters.
+
+![elbow image](https://github.com/sagarv2522/fifa-cluster/blob/48afb75b213af56f39c07c0fe116381c9e225729/images/Screenshot%202023-09-01%20193606.png)
+![sill image](https://github.com/sagarv2522/fifa-cluster/blob/48afb75b213af56f39c07c0fe116381c9e225729/images/Screenshot%202023-09-01%20193630.png)
 
 ### 4. Final Clustering
 
