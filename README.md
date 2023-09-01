@@ -1,1 +1,55 @@
-# fifa-cluster
+# K-Means Clustering of FIFA Players ⚽🥅
+
+## Overview
+
+This repository contains Python code for performing K-Means clustering on FIFA 22 player data using Google Colab and Scikit-Learn. The goal is to cluster FIFA players based on their overall performance, potential, market value, wage, and age.
+
+## Prerequisites
+
+Before running the code, make sure you have the following prerequisites installed:
+
+- **Google Colab**: This code is designed to run on Google Colab, so you'll need a Google account.
+
+- **Python Libraries**: You'll need the following Python libraries, which can be installed using pip:
+   - `google.colab` for authentication.
+   - `pandas` for data manipulation.
+   - `numpy` for numerical operations.
+   - `matplotlib` for data visualization.
+   - `sklearn.preprocessing` for data preprocessing.
+   - `sklearn.decomposition` for PCA (Principal Component Analysis).
+   - `seaborn` for creating line plots.
+   
+- **Google Cloud Project**: You should have a Google Cloud project with BigQuery enabled. Replace `project_id` in the code with your project's ID.
+
+## Code Overview
+
+### 1. Data Loading
+
+The code starts by authenticating your Google account and then loading FIFA 22 player data from Google BigQuery. The selected columns include the player's short name, overall rating, potential, market value, wage, and age.
+
+### 2. K-Means Clustering Implementation
+
+The K-Means clustering is implemented from scratch using Python and NumPy. The key functions include:
+
+- `random_centroid(data, k)`: Generates random initial centroids for the clusters.
+- `get_labels(data, centroid)`: Assigns each data point to the nearest cluster based on centroid distance.
+- `plot_clusters(data, labels, centroids, iteration)`: Transforms the data to 2D using PCA and plots the clusters. This is done for each iteration of the K-Means algorithm.
+
+
+### 3. K-Means Using Scikit-Learn
+
+Another method for K-Means clustering is provided using Scikit-Learn. It calculates and plots the inertia and silhouette score for different numbers of clusters (k) to help you determine the optimal number of clusters.
+
+### 4. Final Clustering
+
+The code performs K-Means clustering with `k=3` using Scikit-Learn and fits the model to the player data.
+
+## Usage
+
+1. Make sure you have all the prerequisites installed and your Google Cloud project set up.
+
+2. Run the code step by step in a Jupyter Notebook or Google Colab.
+
+3. Analyze the results and visualizations to understand how FIFA players are clustered based on their attributes.
+
+Feel free to modify the code and experiment with different values of `k` or add more features to the clustering process. Enjoy exploring the FIFA player data! ⚽📊
